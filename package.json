@@ -1,0 +1,24 @@
+{
+  "name": "sehray-e-khass",
+  "version": "1.0.0",
+  "description": "An E-commerce website",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Noumansharif27/Sehray-e-Khass.git"
+  },
+  "author": "Nouman Sharif Gul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Noumansharif27/Sehray-e-Khass/issues"
+  },
+  "homepage": "https://github.com/Noumansharif27/Sehray-e-Khass#readme",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "mongoose": "^8.19.2"
+  }
+}
