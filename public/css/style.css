@@ -16,6 +16,7 @@ body {
 :root {
   --brand-color: #253a30;
   --navbar-bd-color: #f4f4e8;
+  --card-bg-color: #f1f1f1;
 }
 
 .brand-logo img {
@@ -117,9 +118,10 @@ nav {
 
 .collection {
   width: 100vw;
-  background-color: #253a30;
+  background-color: transparent;
   margin: 0;
   padding: 0;
+  height: auto;
 }
 
 .collection-banner {
@@ -134,23 +136,93 @@ nav {
 }
 
 .collection-pieces {
-  width: 100vw;
+  width: 100%;
   height: auto;
 }
 
+.collection-pieces .collection-name {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.collection-cards {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
 .collection-piece {
-  width: 10vw;
-  height: 15vh;
-  background-color: yellow;
+  background: var(--card-bg-color);
+  border-radius: 2px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  max-width: calc(23% - 1.5rem);
+  height: 90vh;
 }
 
-.collection-pieces .top {
+.collection-piece .top {
+  width: 100%;
   height: 80%;
-  width: 100%;
+  margin-bottom: 0.8rem;
 }
 
-.collection-pieces .top img {
-  width: 100%;
+.collection-piece .top img {
   height: 100%;
-  object-fit: cover;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 4px;
+}
+
+.collection-piece .bottom {
+  /* flex: 0 0 20%; */
+  /* padding: 0.6rem 0.8rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.2rem;
+  color: #253a30;
+}
+
+.collection-piece .bottom .name {
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+.collection-piece .bottom .description {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.collection-piece .bottom .price {
+  margin-top: 0.2rem;
+}
+
+/* Responsive: 2 columns on medium, 1 column on small */
+@media (max-width: 900px) {
+  .collection-piece {
+    flex: 0 1 calc(50% - 1.5rem);
+    max-width: calc(50% - 1.5rem);
+    height: 45vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .collection {
+    padding: 0.5rem;
+  }
+  .collection-piece {
+    flex: 0 1 100%;
+    max-width: 100%;
+    height: 50vh;
+  }
+  .collection-banner {
+    height: 60vh;
+  }
 }
