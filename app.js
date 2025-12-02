@@ -4,7 +4,6 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const mongoose = require("mongoose");
-const dotenv = require("dotenv");
 const ejsMate = require("ejs-mate");
 
 app.use(express.urlencoded({ extended: true }));
@@ -16,7 +15,7 @@ app.set("views", path.join(__dirname, "views"));
 app.engine("ejs", ejsMate);
 
 // Routes
-const listingRoute = require("./routes/index.js");
+const listingRoute = require("./routes/productRoute.js");
 
 const PORT = process.env.APP_PORT || 8080;
 
