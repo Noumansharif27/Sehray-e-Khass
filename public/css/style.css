@@ -4,8 +4,12 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 :root {
-  --brand-color: #145e3c;
+  --brand-color: #253a30;
   --navbar-bd-color: #f4f4e8;
 }
 
@@ -54,6 +58,31 @@ nav {
   margin-bottom: 0;
 }
 
+/* Hero video styles */
+.hero-page {
+  width: auto;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Make the hero section full-bleed even when rendered inside a centered .container */
+.container .hero-page {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  overflow: hidden;
+}
+
+.hero-page .hero-video {
+  width: 100%;
+  max-width: 100%;
+  height: 80vh;
+  display: block;
+  object-fit: cover;
+}
+
 /* Mobile */
 @media (max-width: 450px) {
   .sm-hide {
@@ -75,3 +104,10 @@ nav {
     width: 10vw;
   }
 }
+
+/* If you want the video to cover the viewport height as well, uncomment below */
+/* .hero-page .hero-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+} */
