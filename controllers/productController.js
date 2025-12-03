@@ -1,15 +1,23 @@
-module.exports.indexRoute = (req, res) => {
-  res.render("index.ejs");
+// Get Addd Product
+module.exports.getAddProduct = () => {
+  res.render("addProductFrom.ejs");
 };
 
-module.exports.smokyOliveRoute = (req, res) => {
+//  Post Product
+module.exports.PostaddProduct = (req, res) => {
+  const { product } = req.body;
+  console.log(product);
+  res.send("product added");
+};
+
+module.exports.findProduct = (req, res) => {
   res.render("landing1.ejs");
 };
 
-module.exports.peacockRoute = (req, res) => {
+module.exports.updateProduct = (req, res) => {
   res.render("landing2.ejs");
 };
 
-module.exports.oliveSmokeRoute = (req, res) => {
+module.exports.deleteProduct = (req, res) => {
   res.render("landing3.ejs");
 };
