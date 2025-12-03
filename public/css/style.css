@@ -52,10 +52,6 @@ nav {
   cursor: pointer;
 }
 
-.navbar i.menu-icon {
-  scale: 1.2;
-}
-
 .navbar-banner {
   width: 100%;
   height: 5vh;
@@ -65,6 +61,56 @@ nav {
   justify-content: center;
   align-items: center;
   color: white;
+}
+
+/* Collapse-menu */
+.collapse-menu {
+  width: 30vw;
+  height: 100vh;
+  position: fixed;
+  left: -100%;
+  top: 0;
+  background-color: var(--navbar-bd-color);
+  padding-left: 2rem;
+  transition: all ease-in-out 0.8s 0.0001s;
+}
+
+.collapse-menu .cross-btn {
+  background-color: #ddddd3;
+  width: 4.5rem;
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0 2.5rem 75%;
+  border-radius: 5rem;
+  height: 1.8rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.collapse-menu .cross-btn p {
+  margin-bottom: 0.3rem;
+}
+
+.collapse-menu .cross-btn p,
+.cross-btn i {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.collapse-menu .links {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.collapse-menu .links a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.links a:hover {
+  text-decoration: underline;
 }
 
 .navbar-banner p {
@@ -226,6 +272,14 @@ nav {
     max-width: calc(50% - 1.5rem);
     height: 45vh;
   }
+
+  .navbar .features {
+    width: 4rem;
+  }
+
+  .brand-logo img {
+    width: 10vw;
+  }
 }
 
 @media (max-width: 600px) {
@@ -239,5 +293,9 @@ nav {
   }
   .collection-banner {
     height: 60vh;
+  }
+
+  .brand-logo img {
+    width: 10vw;
   }
 }
