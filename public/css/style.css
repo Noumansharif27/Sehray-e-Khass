@@ -19,8 +19,15 @@ body {
   --card-bg-color: #f1f1f1;
 }
 
+.brand-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .brand-logo img {
-  width: 5vw;
+  width: 8vw;
 }
 
 nav {
@@ -138,11 +145,13 @@ nav {
 .collection-pieces {
   width: 100%;
   height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .collection-pieces .collection-name {
-  margin: 0 auto;
-  text-align: center;
   margin-top: 2rem;
 }
 
@@ -157,7 +166,6 @@ nav {
 }
 
 .collection-piece {
-  background: var(--card-bg-color);
   border-radius: 2px;
   overflow: hidden;
   display: flex;
@@ -170,6 +178,7 @@ nav {
   width: 100%;
   height: 80%;
   margin-bottom: 0.8rem;
+  background-color: var(--card-bg-color);
 }
 
 .collection-piece .top img {
@@ -202,6 +211,12 @@ nav {
 
 .collection-piece .bottom .price {
   margin-top: 0.2rem;
+}
+
+.collection-btn {
+  background-color: var(--brand-color);
+  color: white;
+  margin-bottom: 1rem;
 }
 
 /* Responsive: 2 columns on medium, 1 column on small */
